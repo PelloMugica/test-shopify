@@ -1,0 +1,49 @@
+
+<link rel="stylesheet" href="{{ 'component-crosta-localizations.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-crosta-localizations' | asset_url | stylesheet_tag }}</noscript>
+<div class="icons-row">
+  <div class="left-col">
+    {% render 'icon-row-break-white' %}
+  </div>
+  <div class="right-col">
+    <div class="white-circle"></div>
+    <div class="orange-circle"></div>
+  </div>
+</div>
+<div class="title-row">
+  {% render 'icon-logo' %}
+  <h2>
+    Nuestras panaderias // LOCALIZACIONES
+  </h2>
+</div>
+<div class="localizations-row">
+  <div class="top row">
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Localizacion Crosta",
+  "tag": "section",
+  "class": "localizations",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "localization",
+      "name": "Localizacion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "direccion",
+          "label": "Dirección"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descripción"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
