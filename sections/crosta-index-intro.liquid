@@ -1,0 +1,87 @@
+
+<link rel="stylesheet" href="{{ 'component-crosta-index-intro.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-crosta-index-intro' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="icon-row">
+  {% render 'icon-row-break' %}
+</div>
+<div class="title-row">
+  <h2>
+    {{ section.settings.title }}
+  </h2>
+</div>
+<div class="text-row">
+  <div class="left-col">
+    <h3>
+      {{ section.settings.leftTitle }}
+    </h3>
+    <p>
+      {{ section.settings.text }}
+    </p>
+    <p>
+      {{ section.settings.text_2 }}
+    </p>
+    <a href="{{ section.settings.button_link_1.url }}">
+      {{ section.settings.button_text }}
+      <span>
+        {% render 'icon-next-slide-black' %}
+      </span>
+    </a>
+  </div>
+  <div class="right-col">
+       <img src="{{ section.settings.image | img_url: 'master' }}"
+        loading="lazy"
+        alt="{{ section.settings.image.alt | escape }}"
+      >
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Crosta index intro",
+  "tag": "section",
+  "class": "index-intro-row",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Imagen",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo de la sección"
+    },
+    {
+      "type": "text",
+      "id": "leftTitle",
+      "label": "Titulo de la columna izquierda"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Primer parrafo de la izquierda"
+    },
+    {
+      "type": "textarea",
+      "id": "text_2",
+      "label": "Segundo parrafo de la izquierda"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del boton"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "URL del boton"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crosta index intro"
+    }
+  ]
+}
+{% endschema %}

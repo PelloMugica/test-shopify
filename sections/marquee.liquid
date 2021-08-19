@@ -1,0 +1,31 @@
+{{ 'marquee.css' | asset_url | stylesheet_tag }}
+
+<div class="rightCSS li">
+  <div class="marquee-item">
+    {% render 'icon-row-break-white' %}
+    <h2>
+      {{ section.settings.title }}
+    </h2>
+    {% render 'icon-row-break-white' %}
+  </div>
+  <div class="marquee-item">
+    <h2>
+      {{ section.settings.title }}
+    </h2>
+    {% render 'icon-row-break-white' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquesina",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Texto marquesina"
+    }
+  ]
+}
+{% endschema %}

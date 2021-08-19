@@ -1,9 +1,12 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  border-top: 0.1rem solid white;
+  background-color: #1B2631;
 }
 
-.footer:not(.color-background-1) {
-  border-top: none;
+.pre-footer-row{
+  width: 100%;
+  height: 50px;
+  background-color: #1B2631;
 }
 
 @media screen and (max-width: 749px) {
@@ -47,9 +50,10 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.2);
+  border-top: solid 1px white;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  color: white;
 }
 
 .footer__content-bottom:only-child {
@@ -164,6 +168,8 @@
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: 1.6rem;
+  color: white;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 990px) {
@@ -183,6 +189,11 @@
 
 .footer__list-social .list-social__item--placeholder:not(:only-child) {
   display: none;
+}
+
+.list-social__item--placeholder{
+  color: white;
+  text-transform: uppercase;
 }
 
 .footer-block__newsletter {
@@ -433,11 +444,17 @@ footer details[open] summary ~ * {
 
 .footer-block__details-content {
   margin-bottom: 4rem;
+  color: white;
 }
 
 .footer-block__details-content li:first-child .link {
   padding-top: 3rem;
 }
+
+.footer-block__details-content li .link {
+  color: white;
+}
+
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content {
@@ -476,7 +493,7 @@ footer details[open] summary ~ * {
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link:hover,
   .copyright__content a:hover {
-    color: rgb(var(--color-foreground));
+    color:  white;
     text-decoration: underline;
     text-underline-offset: 0.3rem;
   }

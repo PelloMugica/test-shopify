@@ -1631,22 +1631,48 @@ input[type='checkbox'] {
 /* Main Header Layout */
 .header-wrapper {
   display: block;
-  position: relative;
-  background-color: rgb(var(--color-background));
+  position: fixed;
+  background-color: transparent;
+  width:100%;
+  transition: background 500ms;
+}
+
+.scrolled{
+  background-color: #1B2631;
 }
 
 .header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  border-bottom: 0.1rem solid white;
 }
 
 .header {
-  display: grid;
-  grid-template-areas: 'left-icon heading icons';
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
   align-items: center;
-  background-color: rgb(var(--color-background));
+  background-color: transparent;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.logo-col{
+  width: 15%;
+}
+
+.logo-col a{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-col a img{
+  max-width: 95%;
+  max-height: 45px;
+}
+
+.nav-col{
+  width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 990px) {
@@ -1679,7 +1705,8 @@ input[type='checkbox'] {
   }
 
   .header--middle-left .header__inline-menu {
-    min-width: 45rem;
+    display: flex;
+    justify-content: center;
   }
 
   .header:not(.header--middle-left) .header__inline-menu {
@@ -1748,6 +1775,10 @@ input[type='checkbox'] {
   display: flex;
   grid-area: icons;
   justify-self: end;
+}
+
+.header__icons svg{
+  color: white;
 }
 
 .header__icon:not(.header__icon--summary),
@@ -1950,11 +1981,12 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: white;
+  text-transform: uppercase;
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: #E7A779;
 }
 
 .header__menu-item span {
@@ -1968,7 +2000,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
+  color: #E7A779;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }

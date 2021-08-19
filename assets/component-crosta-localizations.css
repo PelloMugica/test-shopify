@@ -1,0 +1,55 @@
+.localizations{
+  background: #1B2631;
+  color: white;
+}
+
+.icons-row{
+  display: flex;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.icons-row .left-col{
+  width: 50%;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.icons-row .left-col svg{
+  width: 22px;
+  height: 22px;
+}
+
+.icons-row .right-col{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.icons-row .right-col .white-circle{
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 9999px;
+  display: block;
+}
+
+
+.icons-row .right-col .orange-circle{
+  width: 16px;
+  height: 16px;
+  background-color: #E7A779;
+  border-radius: 9999px;
+  margin-left: 15px;
+  display: block;
+}
+
+.title-row{
+  padding-bottom: 150px;
+  border-bottom: 1px solid white;
+}
+
+.title-row h2{
+  color: white;
+}

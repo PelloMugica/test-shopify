@@ -434,3 +434,20 @@ class DeferredMedia extends HTMLElement {
 }
 
 customElements.define('deferred-media', DeferredMedia);
+
+
+const navbar = document.getElementById('navbar')
+
+const onScroll = () => {
+
+  const scroll = document.documentElement.scrollTop
+
+  if (scroll > 0) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled")
+  }
+}
+
+
+window.addEventListener('scroll', onScroll)

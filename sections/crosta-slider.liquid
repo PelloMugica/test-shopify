@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="{{ 'component-crosta-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-crosta-slider' | asset_url | stylesheet_tag }}</noscript>
+
+
+<!-- Slider main container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {% for block in section.blocks %}
+      <div class="swiper-slide" style="background-image:url('{{ block.settings.image| img_url: 'master' }}');">
+        <div class="bottom-row">
+          <div class="number-col">
+            <h2>
+              0{{ forloop.index }}
+            </h2>
+          </div>
+          <div class="left-text-col">
+            <p>
+               {{ block.settings.leftColumn }}
+            </p>
+          </div>
+          <div class="right-text-col">
+            <p>
+               {{ block.settings.rightColumn }}
+            </p>
+          </div>
+          <div class="next-slide-col">
+            {% render 'icon-next-slide' %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  new Swiper('.swiper-container', {
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.next-slide-col',
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "Crosta slider",
+  "tag": "section",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "textarea",
+          "id": "leftColumn",
+          "label": "Columna izquierda"
+        },
+        {
+          "type": "textarea",
+          "id": "rightColumn",
+          "label": "Columna derecha"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crosta slider"
+    }
+  ]
+}
+{% endschema %}
