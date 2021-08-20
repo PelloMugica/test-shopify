@@ -1,3 +1,30 @@
+#MainContent{
+  background:#FFF8F3;
+  padding-top: 150px;
+}
+
+.cart__checkout-button{
+  background: #E7A779;
+  box-shadow: none;
+}
+
+.header-wrapper--border-bottom{
+  border-bottom: 1px solid black;
+}
+
+.header__icons svg{
+  color: black;
+}
+
+.header__menu-item{
+  color: black;
+}
+
+.logo-col a svg{
+  fill: black;
+}
+
+
 .cart {
   position: relative;
   display: block;

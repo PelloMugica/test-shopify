@@ -1,3 +1,20 @@
+.header-wrapper--border-bottom{
+  border-bottom: 1px solid black;
+}
+
+.header__icons svg{
+  color: black;
+}
+
+.header__menu-item{
+  color: black;
+}
+
+.logo-col a svg{
+  fill: black;
+}
+
+
 .product {
   margin: 0;
 }
@@ -14,6 +31,11 @@
 .product__info-wrapper {
   padding-left: 0;
   padding-bottom: 0;
+}
+
+.product-section{
+  padding-top: 150px;
+  background: #FFF8F3;
 }
 
 @media screen and (max-width: 749px) {
@@ -60,8 +82,7 @@
 }
 
 .shopify-payment-button__button--unbranded {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
+  background-color: #E7A779;
   font-size: 1.4rem;
   line-height: 1.2;
   letter-spacing: 0.07rem;

@@ -1,0 +1,23 @@
+{{ 'section-image-break.css' | asset_url | stylesheet_tag }}
+
+
+<style>
+  .image-break{
+    background-image:url('{{ section.settings.image| img_url: 'master' }}');
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Sección solo imagen",
+  "tag": "section",
+  "class": "image-break",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    }
+  ]
+}
+{% endschema %}

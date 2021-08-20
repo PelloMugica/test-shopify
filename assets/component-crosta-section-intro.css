@@ -1,0 +1,61 @@
+.crosta-intro-row{
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.crosta-intro-row .title-row{
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  padding-top: 150px;
+  padding-bottom: 75px;
+}
+
+.crosta-intro-row .title-row h2{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+.crosta-intro-row .text-row{
+  display: flex;
+}
+
+.crosta-intro-row .text-row .left-col{
+  width: 50%;
+  border-right: 1px solid white;
+}
+
+.crosta-intro-row .text-row .left-col p{
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.crosta-intro-row .text-row .right-col{
+  width: 50%;
+}
+
+.crosta-intro-row .text-row .right-col p{
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.crosta-intro-row .last-title-row{
+  border-top: 1px solid white;
+  text-transform: uppercase;
+  padding-top: 150px;
+  padding-bottom: 75px;
+}
+
+.crosta-intro-row .last-title-row h2{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}

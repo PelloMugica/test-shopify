@@ -1,0 +1,65 @@
+
+<link rel="stylesheet" href="{{ 'component-crosta-section-intro.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-crosta-section-intro' | asset_url | stylesheet_tag }}</noscript>
+<style>
+  .crosta-intro-row{
+    background-image:url('{{ section.settings.image| img_url: 'master' }}');
+  }
+</style>
+<div class="title-row">
+  <h2>
+    {{ section.settings.title }}
+  </h2>
+</div>
+<div class="text-row">
+  <div class="left-col">
+    <p>
+      {{ section.settings.text }}
+    </p>
+  </div>
+  <div class="right-col">
+    <p>
+      {{ section.settings.text_2 }}
+    </p>
+  </div>
+</div>
+<div class="last-title-row">
+  <h2>
+    {{ section.settings.final_title }}
+  </h2>
+</div>
+{% schema %}
+{
+  "name": "Crosta section intro",
+  "tag": "section",
+  "class": "crosta-intro-row",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Imagen",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo de la sección"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Parrafo de la izquierda"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2",
+      "label": "Parrafo de la derecha"
+    },
+    {
+      "type": "text",
+      "id": "final_title",
+      "label": "Titulo final de la sección"
+    }
+  ]
+}
+{% endschema %}

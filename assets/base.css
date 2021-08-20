@@ -1547,7 +1547,7 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-base-accent-1));
+  background-color: #E7A779;
   color: rgb(var(--color-base-solid-button-labels));
   height: 1.7rem;
   width: 1.7rem;
@@ -1641,6 +1641,22 @@ input[type='checkbox'] {
   background-color: #1B2631;
 }
 
+.scrolled .header-wrapper--border-bottom{
+  border-bottom: 1px solid white;
+}
+
+.scrolled .header__icons svg{
+  color: white;
+}
+
+.scrolled .header__menu-item{
+  color: white;
+}
+
+.scrolled .logo-col a svg{
+  fill: white;
+}
+
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid white;
 }
@@ -1664,9 +1680,8 @@ input[type='checkbox'] {
   justify-content: center;
 }
 
-.logo-col a img{
-  max-width: 95%;
-  max-height: 45px;
+.logo-col a svg{
+  fill: white;
 }
 
 .nav-col{

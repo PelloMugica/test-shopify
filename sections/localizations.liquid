@@ -18,7 +18,32 @@
   </h2>
 </div>
 <div class="localizations-row">
-  <div class="top row">
+  <div class="top-row">
+    <div class="left-col">
+      <p>
+        Nuestro pan de cada día
+      </p>
+    </div>
+    <div class="right-col">
+      <p>
+        03
+      </p>
+    </div>
+  </div>
+  <div class="icon-row">
+    {% render 'icon-row-break-down' %}
+  </div>
+  <div class="localizations-box">
+    {% for block in section.blocks %}
+      <div class="location">
+        <h2>
+          {{ block.settings.location }}
+        </h2>
+        <p>
+          {{ block.settings.description }}
+        </p>
+      </div>
+    {% endfor %}
   </div>
 </div>
 {% schema %}
@@ -34,7 +59,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "direccion",
+          "id": "location",
           "label": "Dirección"
         },
         {

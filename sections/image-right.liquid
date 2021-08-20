@@ -1,0 +1,50 @@
+{{ 'section-image-right.css' | asset_url | stylesheet_tag }}
+
+
+<div class="image-right-row">
+  <div class="left-col">
+    <h2>
+      {{ section.settings.title }}
+    </h2>
+    <p>
+      {{ section.settings.text }}
+    </p>
+  </div>
+  <div class="right-col">
+      <img srcset="{%- if section.settings.image.width >= 500 -%}{{ sectionsettings.image | img_url: '500x' }} 500w,{%- endif -%}
+        {%- if section.settings.image.width >= 730 -%}{{ section.settings.image | img_url: '730x' }} 730w,{%- endif -%}
+        {%- if section.settings.image.width >= 1440 -%}{{ section.settings.image | img_url: '1440x' }} 1440w,{%- endif -%}
+        {%- if section.settings.image.width >= 990 -%}{{ section.settings.image | img_url: '990x' }} 990w,{%- endif -%}
+        {%- if section.settings.image.width >= 2080 -%}{{ section.settings.image | img_url: '2080x' }} 2080w{%- endif -%}"
+        src="{{ section.settings.image | img_url: '720x' }}"
+        sizes="(min-width: 990px){% if section.blocks.size == 1 %} 990px{% else %} 730px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else%} 500px{% endif %}, calc(100vw - 30px)"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+      >
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Imagen a la derecha",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Roberto crosta",
+      "label": "Titulo a la izquierda"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Parrafo de la derecha"
+    }
+  ]
+}
+{% endschema %}
