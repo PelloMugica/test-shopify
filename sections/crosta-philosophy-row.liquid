@@ -1,0 +1,53 @@
+
+<link rel="stylesheet" href="{{ 'component-crosta-philosophy.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-crosta-philosophy' | asset_url | stylesheet_tag }}</noscript>
+
+<style>
+.crosta-philosophy{
+  background-image:url('{{ 'philosophy-background.svg' | asset_url }}');
+  
+}
+</style>
+<div class="icons-row"> 
+  <svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.6775 6.9861C15.2147 9.16337 16.2804 12.5886 16.8287 17.3225C12.8448 14.5434 10.2774 11.9519 9.05251 9.55881L8.87011 9.20244L8.48247 9.30249L1.87505 11.0078L1.38922 11.1332L1.51631 11.6186L3.20966 18.086L3.31487 18.4878L3.72916 18.4581C6.38993 18.2671 10.0056 19.0978 14.6077 21.016C10.0465 22.9174 6.43706 23.7717 3.75147 23.6378L3.3493 23.6177L3.24397 24.0064L1.51741 30.3773L1.3865 30.8603L1.86967 30.9908L8.5435 32.7926L8.93972 32.8996L9.12188 32.5318C10.1355 30.4854 12.1474 28.2683 15.2175 25.8875L16.7879 24.7309C16.2246 29.5407 15.1935 32.9579 13.7416 35.0493L13.4987 35.3993L13.8056 35.6947L18.6533 40.3603L18.9977 40.6917L19.3443 40.3626L24.2583 35.6971L24.5765 35.395L24.3183 35.0402C22.7693 32.912 21.6946 29.5076 21.1433 24.7613L22.7168 25.9202C25.8122 28.3035 27.873 30.4932 28.9531 32.484L29.1394 32.8273L29.5175 32.7297L36.125 31.0244L36.6102 30.8991L36.4838 30.4142L34.7905 23.9146L34.6858 23.5126L34.2714 23.5419C31.5703 23.7329 27.9452 22.9121 23.3667 21.0166C27.9662 19.1131 31.5851 18.2475 34.2519 18.3624L34.6509 18.3795L34.7559 17.9942L36.4824 11.6555L36.6141 11.172L36.1303 11.0414L29.4565 9.23955L29.0582 9.13201L28.877 9.5027C28.4989 10.2761 27.9917 11.0461 27.351 11.8122C25.7182 13.7143 23.6608 15.5488 21.173 17.3136C21.719 12.6226 22.7624 9.19559 24.2619 6.97776L24.4959 6.63163L24.1968 6.33985L19.3824 1.64213L19.0379 1.30602L18.6889 1.63742L13.7416 6.33513L13.4281 6.63287L13.6775 6.9861Z" stroke="#FFF8F3"/>
+  </svg>
+  {% render 'icon-vertical-break' %}
+</div>
+<div class="philofohy-text-row">
+  <h3>
+    {{ section.settings.title }}
+  </h3>
+  <p>
+    {{ section.settings.text }}
+  </p>
+  <img src="{{ section.settings.image | img_url: 'master' }}"
+    loading="lazy"
+    alt="{{ section.settings.image.alt | escape }}"
+  >
+</div>
+{% schema %}
+{
+  "name": "Filosofia crosta",
+  "tag": "section",
+  "class": "crosta-philosophy",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo de la sección"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto de la izquierda"
+    },
+    {
+      "type": "image_picker",
+      "label": "Firma",
+      "id": "image"
+    }
+  ]
+}
+{% endschema %}

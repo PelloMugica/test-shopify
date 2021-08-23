@@ -1,17 +1,17 @@
 .header-wrapper--border-bottom{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #1B2631;
 }
 
 .header__icons svg{
-  color: black;
+  color: #1B2631;
 }
 
 .header__menu-item{
-  color: black;
+  color: #1B2631;
 }
 
 .logo-col a svg{
-  fill: black;
+  fill: #1B2631;
 }
 
 

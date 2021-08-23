@@ -129,6 +129,10 @@
 
 /* base */
 
+main{
+  background: #FFF8F3;  
+}
+
 .no-js:not(html) {
   display: none !important;
 }
@@ -1525,6 +1529,7 @@ input[type='checkbox'] {
 .modal__close-button .icon {
   width: 1.7rem;
   height: 1.7rem;
+  color: black;
 }
 
 .modal__content {
@@ -1801,6 +1806,7 @@ input[type='checkbox'] {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .header__icon span {
@@ -1907,6 +1913,16 @@ details[open] > .search-modal {
 #right-icon{
   position: absolute;
   right: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  #left-icon{
+    display: none;
+  }
+  
+  #right-icon{
+    display: none;
+  }
 }
 
 .search-modal__form {

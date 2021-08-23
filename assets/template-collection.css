@@ -1,5 +1,22 @@
 .collection {
   position: relative;
+  background: #FFF8F3;
+}
+
+.header-wrapper--border-bottom{
+  border-bottom: 1px solid #1B2631;
+}
+
+.header__icons svg{
+  color: #1B2631;
+}
+
+.header__menu-item{
+  color: #1B2631;
+}
+
+.logo-col a svg{
+  fill: #1B2631;
 }
 
 @media screen and (max-width: 749px) {
@@ -22,12 +39,6 @@
 .collection-product-count {
   margin-top: 0;
   font-size: 1.4rem;
-}
-
-@media screen and (min-width: 750px) {
-  .collection-product-count {
-    margin-top: 1.5rem;
-  }
 }
 
 .template-search .grid__item--small {
@@ -97,6 +108,7 @@
 .collection-filters {
   display: flex;
   flex-direction: column;
+  background: #FFF8F3;
 }
 
 @media screen and (min-width: 750px) {
@@ -209,6 +221,7 @@
 
 .facets__reset {
   margin-left: auto;
+  color: white;
 }
 
 .facets__disclosure {
@@ -232,14 +245,15 @@
 }
 
 .facets__display {
-  background-color: rgb(var(--color-background));
+  background-color: #FFF8F3;
   position: absolute;
-  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border: 1px solid #1B2631;
   top: calc(100% + 0.5rem);
   left: -0.1rem;
   width: 35rem;
   max-height: 55rem;
   overflow-y: auto;
+  color: #1B2631;
 }
 
 .facets__header {
@@ -250,8 +264,9 @@
   font-size: 1.4rem;
   position: sticky;
   top: 0;
-  background-color: rgb(var(--color-background));
+  background-color: #1B2631;
   z-index: 1;
+  color: white;
 }
 
 .facets__list {
@@ -284,13 +299,13 @@
   height: 1.6rem;
   top: 0.7rem;
   left: 0.8rem;
-  z-index: -1;
+  z-index: -1;.facets__price .field .field__currency
   appearance: none;
   -webkit-appearance: none;
 }
 
 .facet-checkbox > svg {
-  background-color: rgb(var(--color-background));
+  background-color: #FFF8F3;
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
@@ -322,10 +337,11 @@
 
 .facets__price .field {
   align-items: center;
+  flex-direction: row-reverse;
 }
 
 .facets__price .field .field__currency {
-  margin-right: 0.6rem;
+  margin-left: 0.6rem;  
 }
 
 .facets__price .field__label {
@@ -470,8 +486,8 @@ a.active-facets__button:focus .active-facets__button-inner {
   right: 0;
   bottom: 0;
   z-index: 100;
-  background-color: rgba(var(--color-foreground), 0.5);
   pointer-events: none;
+  color: #1B2631;
 }
 
 .mobile-facets__wrapper {
@@ -491,16 +507,15 @@ a.active-facets__button:focus .active-facets__button-inner {
 }
 
 .mobile-facets__inner {
-  background-color: rgb(var(--color-background));
-  width: calc(100% - 5rem);
-  margin-left: auto;
+  background-color: #FFF8F3;
+  width: 100%;
   height: 100%;
   overflow-y: auto;
   pointer-events: all;
 }
 
 .mobile-facets__header {
-  background-color: rgb(var(--color-background));
+  background-color: #1B2631;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
   padding: 1rem 2.5rem;
   text-align: center;
@@ -513,6 +528,8 @@ a.active-facets__button:focus .active-facets__button-inner {
 .mobile-facets__header-inner {
   flex-grow: 1;
   position: relative;
+  text-align: left;
+  color: white;
 }
 
 .mobile-facets__info {
@@ -522,10 +539,11 @@ a.active-facets__button:focus .active-facets__button-inner {
 .mobile-facets__heading {
   font-size: 1.4rem;
   margin: 0;
+  color: white;
 }
 
 .mobile-facets__count {
-  color: rgba(var(--color-foreground), 0.7);
+  color: rgba(255,255,255, 0.7);
   font-size: 1.3rem;
   margin: 0;
   flex-grow: 1;
@@ -576,6 +594,7 @@ details[open] .mobile-facets__open {
   width: 4.4rem;
   height: 4.4rem;
   z-index: 101;
+  color: white;
 }
 
 details[open] .mobile-facets__close--no-js {
@@ -738,8 +757,8 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer {
-  background-color: rgb(var(--color-background));
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  background-color: #FFF8F3;
+  border-top: 0.1rem solid #1B2631;
   padding: 2rem;
   bottom: 0;
   position: sticky;
@@ -757,6 +776,19 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__footer noscript .button {
   width: 100%;
+}
+
+.mobile-facets__footer .button {
+  width: 100%;
+  background-color: #E7A779;
+  color: white;
+  box-shadow: none;
+}
+
+.mobile-facets__footer .button--secondary{
+  background: transparent;
+  color: #E7A779;
+  border: 1px solid #E7A779;
 }
 
 .sorting .button {
