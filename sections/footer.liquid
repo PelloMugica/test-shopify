@@ -316,8 +316,8 @@
       </div>
       <div class="footer__column footer__column--info">
         <div class="footer__copyright">
-          <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
-          <small class="copyright__content">{{ powered_by_link }}</small>
+          <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, Crosta Ogitegia</small>
+          <small class="copyright__content">made by <a href="https://savilecode.com" target="_blank">Savilecode</a></small>
         </div>
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
@@ -495,7 +495,7 @@
     {
       "type": "checkbox",
       "id": "newsletter_enable",
-      "default": true,
+      "default": false,
       "label": "t:sections.footer.settings.newsletter_enable.label"
     },
     {
@@ -512,7 +512,7 @@
     {
       "type": "checkbox",
       "id": "show_social",
-      "default": false,
+      "default": true,
       "label": "t:sections.footer.settings.show_social.label"
     },
     {
@@ -523,7 +523,7 @@
     {
       "type": "checkbox",
       "id": "enable_country_selector",
-      "default": true,
+      "default": false,
       "label": "t:sections.footer.settings.enable_country_selector.label"
     },
     {
@@ -534,7 +534,7 @@
     {
       "type": "checkbox",
       "id": "enable_language_selector",
-      "default": true,
+      "default": false,
       "label": "t:sections.footer.settings.enable_language_selector.label"
     },
     {

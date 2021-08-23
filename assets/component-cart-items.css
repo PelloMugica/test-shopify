@@ -4,6 +4,10 @@
   border: none;
 }
 
+.title{
+  text-transform: uppercase;
+}
+
 .cart-items th {
   text-align: left;
   padding-bottom: 1.8rem;

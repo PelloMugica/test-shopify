@@ -1,7 +1,21 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
-<div class="contact page-width page-width--narrow spaced-section">
-  <h2 class="title">{{ section.settings.heading | escape }}</h2>
+<div class="image-col">
+  <img srcset="{%- if section.settings.image.width >= 500 -%}{{ sectionsettings.image | img_url: '500x' }} 500w,{%- endif -%}
+    {%- if section.settings.image.width >= 730 -%}{{ section.settings.image | img_url: '730x' }} 730w,{%- endif -%}
+    {%- if section.settings.image.width >= 1440 -%}{{ section.settings.image | img_url: '1440x' }} 1440w,{%- endif -%}
+    {%- if section.settings.image.width >= 990 -%}{{ section.settings.image | img_url: '990x' }} 990w,{%- endif -%}
+    {%- if section.settings.image.width >= 2080 -%}{{ section.settings.image | img_url: '2080x' }} 2080w{%- endif -%}"
+    src="{{ section.settings.image | img_url: '720x' }}"
+    sizes="(min-width: 990px){% if section.blocks.size == 1 %} 990px{% else %} 730px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else%} 500px{% endif %}, calc(100vw - 30px)"
+    alt="{{ section.settings.image.alt | escape }}"
+    loading="lazy"
+  >
+</div>
+<div class="contact">
+  <h2>
+
+  </h2>
   {%- form 'contact', id: 'ContactForm' -%}
     {%- if form.posted_successfully? -%}
       <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
@@ -48,9 +62,15 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="field">
-      <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
-      <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+    <div class="contact__fields">
+      <div class="field">
+        <input class="field__input" type="text" id="ContactForm-lastname" name="contact[lastname]" placeholder="Apellidos">
+        <label class="field__label" for="ContactForm-lastname">Apellidos</label>
+      </div>
+      <div class="field">
+        <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+      </div>
     </div>
     <div class="field">
       <textarea
@@ -76,13 +96,18 @@
 {
   "name": "t:sections.contact-form.name",
   "tag": "section",
-  "class": "spaced-section",
+  "class": "contact-section",
   "settings": [
     {
       "type": "text",
       "id": "heading",
       "default": "Contact form",
       "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen de la izquierda"
     }
   ],
   "presets": [
