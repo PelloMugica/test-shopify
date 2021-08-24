@@ -30,3 +30,32 @@
   text-transform: uppercase;
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  .image-left-row{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-left-row .left-col{
+    width: 100%;
+  }
+  
+  .image-left-row .left-col img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-left-row .right-col{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .image-left-row .right-col svg{
+    margin-bottom: 50px;
+  }
+  .image-left-row .right-col h2{
+    width: 95%;
+  }
+}
