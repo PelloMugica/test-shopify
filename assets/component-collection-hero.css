@@ -13,6 +13,11 @@
   padding-bottom: 2rem;
 }
 
+.header__icon--menu .icon{
+  color: black;
+}
+
+
 @media screen and (min-width: 750px) {
   .collection-hero.collection-hero--with-image {
     padding: 4rem 0 4rem;

@@ -1,6 +1,11 @@
 .footer {
   border-top: 0.1rem solid white;
   background-color: #1B2631;
+  color: white !important;
+}
+
+.footer .accordion__title {
+  color: white;
 }
 
 .pre-footer-row{

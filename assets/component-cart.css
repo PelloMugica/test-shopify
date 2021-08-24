@@ -24,6 +24,10 @@
   fill: black;
 }
 
+.header__icon--menu .icon{
+  color: black;
+}
+
 
 .cart {
   position: relative;
