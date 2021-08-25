@@ -1646,6 +1646,10 @@ input[type='checkbox'] {
   background-color: #1B2631;
 }
 
+.scrolled .header__icon--menu .icon{
+  color: white !important;
+}
+
 .scrolled .header-wrapper--border-bottom{
   border-bottom: 1px solid white;
 }

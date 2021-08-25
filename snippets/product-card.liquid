@@ -27,7 +27,7 @@
             endif
           -%}
 
-          <div{% if add_image_padding %} class="card__media-full-spacer"{% endif %}>
+          <div {% if add_image_padding %}class="card__media-full-spacer"{% endif %}>
             <div class="media media--transparent media--{{ media_size }} media--hover-effect"
               {% if media_size == 'adapt' and product_card_product.featured_media %} style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"{% endif %}
             >
@@ -90,15 +90,16 @@
         {%- endif -%}
 
         {%- if product_card_product.featured_media -%}
-          <span class="card-information__text h5">
-            {{ product_card_product.title | escape }}
-          </span>
+          <div class="title-price-row">
+            <span class="card-information__text h5">
+              {{ product_card_product.title | escape }}
+            </span>
+            {% render 'price', product: product_card_product, price_class: '' %}
+          </div>
         {%- endif -%}
 
         {% comment %} TODO: metafield {% endcomment %}
         <span class="caption-large light">{{ block.settings.description | escape }}</span>
-
-        {% render 'price', product: product_card_product, price_class: '' %}
       </div>
     </div>
   </a>
